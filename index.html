@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logos Orbit and Spin</title>
+  <link rel="stylesheet" href="/src/output.css">
+<style>
+    @keyframes spinRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes spinLogo {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .spin-ring {
+      animation: spinRing 20s linear infinite;
+    }
+    .orbit-item {
+      position: absolute;
+      transform-origin: center;
+    }
+    .orbit-item img {
+      animation: spinLogo 20s linear infinite reverse;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="relative w-72 h-72 ">
+    <div class="spin-ring relative w-full h-full ">
+      <!-- Logos with independent spin -->
+      <div class="orbit-item -top-5 left-1/2 -translate-x-1/2">
+        <img src="/img/facebook-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+      <div class="orbit-item top-[18%] right-5 -translate-y-1/2">
+        <img src="/img/github-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+      <div class="orbit-item top-1/2 -right-5 -translate-y-1/2">
+        <img src="/img/instagram-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+      <div class="orbit-item bottom-[18%] right-2 translate-y-1/2">
+        <img src="/img/twitter-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+      <div class="orbit-item -bottom-5 left-1/2 -translate-x-1/2">
+        <img src="/img/linkedin-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+      <div class="orbit-item bottom-[17%] left-5 translate-y-1/2">
+        <img src="/img/github-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+      <div class="orbit-item top-1/2 -left-5 -translate-y-1/2">
+        <img src="/img/twitter-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+      <div class="orbit-item top-[20%] left-5 -translate-y-1/2">
+        <img src="/img/linkedin-icon.svg" class="w-10 h-10 object-contain" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
